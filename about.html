@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - JungleStore</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9fafb;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Membuat halaman minimal setinggi layar */
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: #4c6ef5;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeInHeader 1s ease-out forwards;
+        }
+
+        @keyframes fadeInHeader {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #f59e0b;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f59e0b;
+            transform: translateY(-3px);
+        }
+
+        /* About Section */
+        #about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+            flex-grow: 1; /* Membuat bagian ini tumbuh dan mengambil ruang yang tersisa */
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #about img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            transition: transform 0.4s ease;
+            opacity: 0;
+            animation: fadeInImage 1s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeInImage {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        #about h2 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeInText 1s ease-out forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #about p {
+            font-size: 18px;
+            color: #555;
+            width: 80%;
+            max-width: 800px;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeInText 1s ease-out forwards;
+            animation-delay: 1.2s;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4c6ef5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+            opacity: 0;
+            animation: fadeInFooter 1s ease-out forwards;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes fadeInFooter {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+
+        /* Hover effect on Footer */
+        footer:hover {
+            background-color: #3745a8;
+            transform: translateY(-5px);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Jungle<span>Store</span></h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <!-- Foto Store -->
+        <img src="https://via.placeholder.com/200" alt="Store Photo">
+        
+        <!-- Nama Store -->
+        <h2>TopUpNow</h2>
+
+        <!-- Keterangan Tentang Store -->
+        <p>JungleStore adalah platform terbaik untuk melakukan top-up berbagai layanan seperti game, e-wallet, dan pulsa secara cepat dan aman. Kami memberikan kemudahan akses dan pilihan pembayaran yang beragam untuk kenyamanan Anda.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 JungleStore. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // You can add JavaScript to handle any dynamic content
+    </script>
+</body>
+</html>

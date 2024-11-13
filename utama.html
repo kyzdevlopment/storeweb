@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan kami - JungleStore</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9fafb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: #4c6ef5;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #f59e0b;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f59e0b;
+            transform: translateY(-3px);
+        }
+
+        /* Pilihan TopUp Section */
+        .topup-choices {
+            display: flex;
+            justify-content: space-around;
+            padding: 60px 20px;
+            margin-top: 40px;
+            gap: 40px;
+            flex-wrap: wrap;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .choice {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .choice:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .choice img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .choice img:hover {
+            transform: scale(1.1);
+        }
+
+        .choice h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .choice p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInText 1s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        .choice a {
+            text-decoration: none;
+            background-color: #4c6ef5;
+            color: white;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            opacity: 0;
+            animation: fadeInText 1s ease-out forwards;
+            animation-delay: 1s;
+        }
+
+        .choice a:hover {
+            background-color: #3745a8;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .topup-choices {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .choice {
+                width: 90%;
+                margin-bottom: 30px;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4c6ef5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Jungle<span>Store</span></h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Pilihan TopUp Section -->
+    <section id="topup" class="topup-choices">
+        <div class="choice">
+            <img src="https://via.placeholder.com/80" alt="Game">
+            <h3>Top Up Game</h3>
+            <p>Top Up berbagai jenis game favoritmu dengan mudah!</p>
+            <a href="listgame.html">Selengkapnya</a>
+        </div>
+        
+        <div class="choice">
+            <img src="https://via.placeholder.com/80" alt="E-Wallet">
+            <h3>Sewa Panel</h3>
+            <p>Kami menyediakan layanan sewa panel bot dan game dengan harga murah!</p>
+            <a href="listpanel.html">Selengkapnya</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 JungleStore. All rights reserved.</p>
+    </footer>
+
+    <script>
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harga ML - JungleStore</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9fafb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: #4c6ef5;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #f59e0b;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f59e0b;
+            transform: translateY(-3px);
+        }
+
+        /* Pilihan TopUp Section */
+        .topup-choices {
+            display: flex;
+            justify-content: space-around;
+            padding: 60px 20px;
+            margin-top: 40px;
+            gap: 40px;
+            flex-wrap: wrap;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .choice {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .choice:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .choice img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .choice img:hover {
+            transform: scale(1.1);
+        }
+
+        .choice h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .choice p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInText 1s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        .choice a {
+            text-decoration: none;
+            background-color: #4c6ef5;
+            color: white;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            opacity: 0;
+            animation: fadeInText 1s ease-out forwards;
+            animation-delay: 1s;
+        }
+
+        .choice a:hover {
+            background-color: #3745a8;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .topup-choices {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .choice {
+                width: 90%;
+                margin-bottom: 30px;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4c6ef5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Jungle<span>Store</span></h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Pilihan TopUp Section -->
+    <section id="topup" class="topup-choices">
+        <div class="choice">
+            <img src="https://via.placeholder.com/80" alt="Game">
+            <h3>Diamond</h3>
+                <ul>
+                    <li>85 Dm = 22.000</li>
+                    <li>100Dm = 26.000</li>
+                    <li>144Dm = 37.000</li>
+                    <li>170Dm = 44.000</li>
+                    <li>185Dm = 48.000</li>
+                    <li>222Dm = 58.000</li>
+                    <li>240Dm = 62.000</li>
+                    <li>257Dm = 67.000</li>
+                    <li>284Dm = 73.000</li>
+                    <li>301Dm = 77.000</li>
+                    <li>345Dm = 89.000</li>
+                    <li>355Dm = 91.000</li>
+                    <li>374Dm = 96.000</li>
+                    <li>384Dm = 98.00/</li>
+                    <li>408Dm = 104.000</li>
+                    <li>425Dm = 109.000</li>
+                    <li>448Dm = 125.000</li>
+                    <li>512Dm = 132.000</li>
+                    <li>601Dm = 152.000</li>
+                </ul>
+                <h5>Mohon maaf karena tidak semua list dimasukkan, jika ingim bertanys tentang dm yang tidak dimasukkan bisa chat saya melalui nomor<br> <br><a href="contact.html">disini</a></a></h5>
+                <br>
+         </div>
+         <div class="choice">
+            <img src="https://via.placeholder.com/80" alt="Game">
+            <h3>Lainnya</h3>
+                <ul>
+                  <li>1x WDP 220Dm = 25.000</li>
+                  <li>2x WDP 440Dm = 54.000</li>
+                  <li>3x WDP 660Dm = 80.000</li>
+                  <li>4x WDP 880Dm = 107.000</li>
+                  <li>5x WDP 1100Dm = 134.000</li>
+                  <li>Mobile Legend Coupon pass = 70.000</li>
+                  <li>Starlight Membership = 83.000</li>
+                  <li>Mobile Legend Twilight Pass = 143.000</li>
+                  <li>Mobile Legemd Member Pluss = 198.000</li>
+                  <li></li>
+                </ul>
+                <br>
+         </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 JungleStore. All rights reserved.</p>
+    </footer>
+
+    <script>
+    </script>
+</body>
+</html>

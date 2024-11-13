@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak kami - JungleStore</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9fafb;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: #4c6ef5;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeInHeader 1s ease-out forwards;
+        }
+
+        @keyframes fadeInHeader {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #f59e0b;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f59e0b;
+            transform: translateY(-3px);
+        }
+
+        /* Contact Section */
+        #contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+            flex-grow: 1;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #contact h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #4c6ef5;
+            opacity: 0;
+            animation: fadeInText 1s ease-out forwards;
+            animation-delay: 0.3s;
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #contact p {
+            font-size: 18px;
+            color: #555;
+            width: 80%;
+            max-width: 800px;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeInText 1s ease-out forwards;
+            animation-delay: 0.6s;
+        }
+
+        /* Contact Info Container */
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .contact-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            width: 250px;
+            margin: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-card i {
+            font-size: 40px;
+            color: #4c6ef5;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card i:hover {
+            color: #f59e0b;
+        }
+
+        .contact-card h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            font-size: 16px;
+            color: #777;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4c6ef5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+            opacity: 0;
+            animation: fadeInFooter 1s ease-out forwards;
+            animation-delay: 1.2s;
+        }
+
+        @keyframes fadeInFooter {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Jungle<span>Store</span></h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h2>Kontak Kami</h2>
+        <p>Jika Anda memiliki pertanyaan atau membutuhkan bantuan lebih lanjut, hubungi kami melalui informasi berikut.</p>
+
+        <div class="contact-info">
+            <!-- WhatsApp Contact Card -->
+            <div class="contact-card">
+                <i class="fab fa-whatsapp"></i>
+                <h3>WhatsApp</h3>
+                <p>+62 838-9395-4433</p>
+                <a href="https://wa.me/6283893954433" target="_blank">Chat Now</a>
+            </div>
+
+            <!-- Instagram Contact Card -->
+            <div class="contact-card">
+                <i class="fab fa-instagram"></i>
+                <h3>Instagram</h3>
+                <p>@junglestore.id</p>
+                <a href="https://instagram.com/junglestore.id" target="_blank">Visit Instagram</a>
+            </div>
+
+            <!-- Discord Contact Card -->
+            <div class="contact-card">
+                <i class="fab fa-discord"></i>
+                <h3>Discord</h3>
+                <p></p>
+                <a href="https://discord.com/invite/yourdiscordinvite" target="_blank">Join Discord</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 JungleStore. All rights reserved.</p>
+    </footer>
+
+    <!-- FontAwesome CDN -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script>
+        // You can add JavaScript for dynamic actions if needed
+    </script>
+</body>
+</html>
